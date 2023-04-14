@@ -1,9 +1,9 @@
-local status_ok, config = pcall(require, "Comment")
+local status_ok, comment = pcall(require, "Comment")
 if not status_ok then
   return
 end
 
-config.setup {
+comment.setup {
     ---Add a space b/w comment and the line
     padding = true,
     ---Whether the cursor should stay at its position

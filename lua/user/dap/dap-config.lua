@@ -1,11 +1,6 @@
 local M = {}
 
 local function config_dapi_and_sign()
-	local dap_install = require("dap-install")
-	dap_install.setup({
-		installation_path = vim.fn.stdpath("data") .. "/dapinstall/",
-	})
-
 	local dap_breakpoint = {
 		error = {
 			text = "🛑",
@@ -62,32 +57,23 @@ local function config_dapui()
 end
 
 local function config_debuggers()
-	local dap = require("dap")
-	-- TODO: wait dap-ui for fixing temrinal layout
-	-- the "30" of "30vsplit: doesn't work
-	-- dap.defaults.fallback.terminal_win_cmd = '30vsplit new' -- this will be overrided by dapui
-	-- dap.set_log_level("DEBUG")
-
 	-- load from json file
 	require("dap.ext.vscode").load_launchjs(nil, { cppdbg = { "cpp" } })
-	require("dap.dap-cpp")
-	require("dap.dap-go")
-	require("dap.dap-python")
-	require("dap.dap-lua")
+	require("dapc.dap-python")
 end
 
 local function auto_install()
-    local mason_dap = require("mason-nvim-dap")
-    mason_dap.setup({
-        ensure_installed = { "python" },
-        automatic_installation = true,
-        handlers = nil,
-    })
+	local mason_dap = require("mason-nvim-dap")
+	mason_dap.setup({
+		ensure_installed = { "python" },
+		automatic_installation = true,
+		handlers = nil,
+	})
 end
 
 function M.setup()
-    print("setup dap")
-    auto_install()
+	print("setup dap")
+	auto_install()
 	config_dapi_and_sign()
 	config_dapui()
 	config_debuggers() -- Debugger

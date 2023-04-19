@@ -64,7 +64,6 @@ telescope.setup({
 				["?"] = actions.which_key,
 			},
 		},
-        vimgrep_arguments = vimgrep_arguments,
 	},
 	pickers = {
 		-- Default configuration for builtin pickers goes here:

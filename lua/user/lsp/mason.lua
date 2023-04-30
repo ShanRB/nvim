@@ -7,6 +7,7 @@ local servers = {
     "docker_compose_language_service",
     "marksman",
     "sqlls",
+    "clangd",
 }
 
 local settings = {

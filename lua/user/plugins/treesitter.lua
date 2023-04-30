@@ -1,11 +1,19 @@
 return {
-	-- Tree sitter
-	{
-		"nvim-treesitter/nvim-treesitter",
+    -- Tree sitter
+    {
+        "nvim-treesitter/nvim-treesitter",
         version = false,
-		build = ":TSUpdate",
-	},
-	"p00f/nvim-ts-rainbow",
-	"windwp/nvim-autopairs",
-	"JoosepAlviste/nvim-ts-context-commentstring",
+        build = ":TSUpdate",
+        config = function()
+            require("user.configs.treesitter")
+        end,
+    },
+    "p00f/nvim-ts-rainbow",
+    {
+        "windwp/nvim-autopairs",
+        config = function()
+            require("user.configs.autopairs")
+        end,
+    },
+    "JoosepAlviste/nvim-ts-context-commentstring",
 }

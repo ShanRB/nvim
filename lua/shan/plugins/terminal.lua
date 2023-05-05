@@ -1,6 +1,6 @@
 return {
     "akinsho/toggleterm.nvim",
     config = function()
-        require("user.configs.toggleterm")
+        require("shan.configs.toggleterm")
     end,
 }

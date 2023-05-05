@@ -3,7 +3,7 @@ return {
     {
         "nvim-tree/nvim-tree.lua",
         config = function()
-            require("user.configs.nvim-tree")
+            require("shan.configs.nvim-tree")
         end,
     },
 }

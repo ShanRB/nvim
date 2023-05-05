@@ -2,7 +2,7 @@ return {
     {
         "goolord/alpha-nvim",
         config = function()
-            require("user.configs.alpha")
+            require("shan.configs.alpha")
         end,
     },
 }

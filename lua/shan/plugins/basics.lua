@@ -3,7 +3,7 @@ return {
     {
         "lewis6991/impatient.nvim",
         config = function()
-            require("user.configs.impatient")
+            require("shan.configs.impatient")
         end,
     },
     "nvim-lua/popup.nvim",

@@ -3,7 +3,7 @@ return {
         "williamboman/mason.nvim",
         build = ":MasonUpdate",
         config = function()
-          require("user.configs.mason")
+          require("shan.configs.mason")
         end,
     },
     {
@@ -19,7 +19,7 @@ return {
             },
         },
         config = function()
-            require("user.lsp")
+            require("shan.lsp")
         end,
     },
     "jay-babu/mason-null-ls.nvim",

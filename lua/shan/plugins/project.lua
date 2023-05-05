@@ -3,7 +3,7 @@ return {
     {
         "ahmedkhalf/project.nvim",
         config = function()
-            require("user.configs.project")
+            require("shan.configs.project")
         end,
     },
 }

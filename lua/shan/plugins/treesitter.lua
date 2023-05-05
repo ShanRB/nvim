@@ -5,14 +5,14 @@ return {
         version = false,
         build = ":TSUpdate",
         config = function()
-            require("user.configs.treesitter")
+            require("shan.configs.treesitter")
         end,
     },
     "p00f/nvim-ts-rainbow",
     {
         "windwp/nvim-autopairs",
         config = function()
-            require("user.configs.autopairs")
+            require("shan.configs.autopairs")
         end,
     },
     "JoosepAlviste/nvim-ts-context-commentstring",

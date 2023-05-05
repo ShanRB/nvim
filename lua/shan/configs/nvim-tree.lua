@@ -3,7 +3,7 @@ if not status_ok then
     return
 end
 
-local config_status_ok, on_attach = pcall(require, "user.configs.nvim-tree-keys")
+local config_status_ok, on_attach = pcall(require, "shan.configs.nvim-tree-keys")
 if not config_status_ok then
     return
 end

@@ -26,4 +26,4 @@ if not status_ok then
 end
 
 -- Install your plugins here
-pluginM.setup("user.plugins")
+pluginM.setup("shan.plugins")

@@ -2,7 +2,7 @@ return {
     {
         "hrsh7th/nvim-cmp",
         config = function()
-            require("user.configs.nvim-cmp")
+            require("shan.configs.nvim-cmp")
         end,
         dependencies = {
             "hrsh7th/cmp-buffer",

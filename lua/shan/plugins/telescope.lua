@@ -10,7 +10,7 @@ return {
             "nvim-telescope/telescope-fzy-native.nvim",
         },
         config = function()
-            require("user.configs.telescope")
+            require("shan.configs.telescope")
         end,
     },
 }

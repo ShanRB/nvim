@@ -2,19 +2,19 @@ return {
     {
         "numToStr/Comment.nvim",
         config = function()
-            require("user.configs.comment")
+            require("shan.configs.comment")
         end,
     },
     {
         "rcarriga/nvim-notify",
         config = function()
-            require("user.configs.notify")
+            require("shan.configs.notify")
         end,
     },
     {
         "folke/which-key.nvim",
         config = function()
-            require("user.configs.which-key")
+            require("shan.configs.which-key")
         end,
     },
 }

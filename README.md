@@ -1,5 +1,6 @@
 # nvim
 ## TODO 
+- config lsp properly
 - put lsp configs to lazy vim
 - config dap
 ## NOTE

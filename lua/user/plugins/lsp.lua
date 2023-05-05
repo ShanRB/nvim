@@ -1,8 +1,28 @@
 return {
-	{ "williamboman/mason.nvim", build = ":MasonUpdate" },
-	"williamboman/mason-lspconfig.nvim",
-	"neovim/nvim-lspconfig",
-	"jay-babu/mason-null-ls.nvim",
-	"jose-elias-alvarez/null-ls.nvim",
-	"RRethy/vim-illuminate",
+    {
+        "williamboman/mason.nvim",
+        build = ":MasonUpdate",
+        config = function()
+          require("user.configs.mason")
+        end,
+    },
+    {
+        "neovim/nvim-lspconfig",
+        dependencies = {
+            "mason.nvim",
+            "williamboman/mason-lspconfig.nvim",
+            {
+                "hrsh7th/cmp-nvim-lsp",
+                cond = function()
+                    return require("lazy.core.config").plugins["nvim-cmp"] ~= nil
+                end,
+            },
+        },
+        config = function()
+            require("user.lsp")
+        end,
+    },
+    "jay-babu/mason-null-ls.nvim",
+    "jose-elias-alvarez/null-ls.nvim",
+    "RRethy/vim-illuminate",
 }
